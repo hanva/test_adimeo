@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Test d'intégration</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<header>
+	<div class="wrapper wrapper-pre-header">
+		<div class="pre-header">
+			<div class="left">
+				Réservé exclusivement aux professionnels du bâtiment
+			</div>
+			<div class="right">
+				<nav id="pre-header-argu">
+					<ul>
+						<li class="commande"><a href="#">Commandé avant 12H, livré avant 16H !</a></li>
+						<li class="retrait"><a href="#">Retrait en dépôt</a></li>
+						<li class="paiement"><a href="#">Paiement sécurisé</a></li>
+						<li class="langue">
+							<span>Langue</span>
+							<ul>
+								<li class="selected"><a href="#">Français</a></li>
+								<li><a href="#">Anglais</a></li>
+								<li><a href="#">Espagnol</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper wrapper-header">
+		<div class="header">
+			<div class="logo"><img src="logo.png" alt="Logo Plateforme du bâtiment" /></div>
+			<div class="recherche">
+				<form method="get">
+					<div class="form-item">
+						<select name="metier">
+							<option value="">Par métier</option>
+							<option value="1">Maçon</option>
+							<option value="2">Plombier</option>
+							<option value="3">Peintre</option>
+							<option value="4">Chauffagiste</option>
+						</select>
+					</div>
+					<div class="form-item">
+						<input type="text" name="mots_cles" placeholder="Rechercher un produit, une marque..." />
+					</div>
+					<div class="form-item">
+						<input type="submit" name="submit" value="Rechercher" />
+					</div>
+				</form>
+			</div>
+			<nav class="menu-utilisateur">
+				<ul>
+					<li class="depot"><div class="label"><a href="#">Mon dépôt</a></div><div class="lien"><a href="#">Se connecter</a></div></li>
+					<li class="compte"><div class="label"><a href="#">Mon compte</a></div><div class="lien"><a href="#">Se connecter</a></div></li>
+					<li class="panier"><div class="label"><a href="#">Mon panier</a></div></li>
+				</ul>
+			</nav>
+		</div>
+		<nav class="main-menu">
+			<ul>
+				<li><a href="#">Maçon plaquiste</a></li>
+				<li><a href="#">Menuisier serrurier</a></li>
+				<li><a href="#">Peintre</a></li>
+				<li><a href="#">Carreleur</a></li>
+				<li><a href="#">Plombier</a></li>
+				<li><a href="#">Electricien</a></li>
+				<li><a href="#">Outillage protection</a></li>
+				<li class="highlighted"><a href="#">100% pro</a></li>
+				<li class="highlighted"><a href="#">100% service</a></li>
+				<li class="highlighted"><a href="#">100% solution</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<main>
+	<div class="wrapper main-wrapper">
+		<div id="main-container">
+			<nav class="breadcrumb">
+				<ul>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Métier</a></li>
+					<li><a href="#">Grande famille</a></li>
+					<li><a href="#">Famille</a></li>
+					<li><a href="#">Produit</a></li>
+				</ul>
+			</nav>
+			<h1>Première connexion</h1>
+			<h2>J'ai déjà ma carte</h2>
+			<form method="get">
+				<div class="form-item numero-carte">
+					<label for="numero-carte">Numéro de carte :</label>
+					<input type="text" id="numero-carte" name="numero_carte" />
+				</div>
+				<div class="form-item numero-portable">
+					<label for="numero-portable">N° de téléphone portable :</label>
+					<input type="text" id="numero-portable" name="numero_portable" />
+				</div>
+				<div class="form-item adresse-email">
+					<label for="adresse-email">Adresse email :</label>
+					<input type="text" id="adresse-email" name="adresse_email" />
+				</div>
+				<div class="form-item confimer-email">
+					<label for="confimer-email">Confirmer adresse email :</label>
+					<input type="text" id="confimer-email" name="confimer_email" />
+				</div>
+				<div class="form-item mot-de-passe">
+					<label for="mot-de-passe">Mot de passe :</label>
+					<input type="text" id="mot-de-passe" name="mot_de_passe" />
+				</div>
+				<div class="form-item confirmer-mot-de-passe">
+					<label for="confirmer-mot-de-passe">Confirmation :</label>
+					<input type="text" id="confirmer-mot-de-passe" name="confirmer_mot_de_passe" />
+				</div>
+				<div class="form-item depot-favori">
+					<label for="depot-favori">Dépôt favori :</label>
+					<select id="depot-favori" name="depot_favori">
+						<option value="">Choisir mon dépôt</option>
+						<option value="1">Aubervilliers</option>
+						<option value="2">Pantin</option>
+						<option value="3">Nanterre</option>
+						<option value="4">Paris 12</option>
+					</select>
+					<a href="#">Changer de dépôt</a>
+				</div>
+				<div class="form-item submit-form">
+					<a href="#">Carte perdue ?</a>
+					<input type="submit" value="Se connecter" />
+				</div>
+			</form>
+			<div class="devenir-client">
+				<h2>Devenir client</h2>
+				<div class="demande-carte">
+					<h3>Je demande <em>ma carte</em> 100% pro</h3>
+					<p>
+						L'accès à nos points de vente est exclusivement réservé aux professionnels du bâtiment.
+					</p>
+				</div>
+				<div class="right">
+					<a href="#">Demander sa carte</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+</body>
+</html>
