@@ -1,0 +1,303 @@
+/** Fonts **/
+@font-face {
+    font-family: "Raleway Regular";
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway ExtraBold";
+    src: url("../fonts/Raleway-ExtraBold.ttf");
+}
+
+body, select, input, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway Regular", serif;
+}
+
+.font_light {
+    font-weight: 300;
+}
+
+.font_bold {
+    font-weight: 700;
+}
+
+.font_extra_bold {
+    font-family: "Raleway ExtraBold", serif;
+}
+
+.text_uppercase {
+    text-transform: uppercase;
+}
+
+.text_underline {
+    text-decoration: underline;
+}
+
+/** Colors **/
+.c_primary {
+    color: #fa7a00;
+}
+
+.bg_primary {
+    background: #fa7a00;
+}
+
+.c_secondary {
+    color: #f4f4f4;
+}
+
+.c_secondary--dark {
+    color: #7b7b7b;
+}
+
+.bg_secondary {
+    background: #f4f4f4;
+}
+
+.bg_secondary--dark {
+    background: #e7e7e7;
+}
+
+.c_black {
+    color: #333333;
+}
+
+a {
+    color: #333333;
+}
+
+/** General **/
+.wrapper {
+    max-width: 1250px;
+    padding: 0 50px;
+    margin: auto;
+}
+
+.d_flex {
+    display: flex;
+}
+
+.f_column {
+    flex-direction: column;
+}
+
+.f_wrap {
+    flex-wrap: wrap;
+}
+
+.f_auto {
+    flex: auto;
+}
+
+.j_between {
+    justify-content: space-between;
+}
+
+.j_around {
+    justify-content: space-around;
+}
+
+.j_center {
+    justify-content: center;
+}
+
+.v_middle {
+    vertical-align: middle;
+}
+
+.align_center {
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text_center {
+    text-align: center;
+}
+
+/** Pre Header **/
+#pre_header_argu ul {
+    margin: 0;
+}
+
+.pre_header_argu--item {
+    padding: 15px 0;
+    margin-left: 30px;
+}
+
+.pre_header_argu--item.langue {
+    background: #dbdbdb;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.pre_header_argu--item.langue:hover .hidden {
+    display: block;
+}
+
+.pre_header_argu--item.langue .hidden {
+    position: absolute;
+    background: white;
+    display: none;
+}
+
+.pre_header_argu--item.langue li {
+    padding: 10px;
+}
+
+
+/** Header **/
+.header {
+    padding: 25px 0;
+}
+
+header {
+    border-bottom: 2px solid #d2d0d0;
+}
+
+.recherche {
+    flex: 8;
+}
+
+.recherche form {
+    border: 3px solid #f4f4f4;
+    margin: 0 20px;
+}
+
+.recherche .form_item {
+    border: 2px solid #d2d0d0;
+}
+
+.recherche .form_item-loupe {
+    padding: 15px;
+}
+
+.recherche input, .recherche select {
+    padding: 15px;
+    border: none;
+}
+
+/** Menu **/
+.main_menu {
+    width: fit-content;
+    margin: auto;
+}
+
+.main_menu__item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    height: 50px;
+    text-align: center;
+}
+
+.main_menu__item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    bottom: 12.5px;
+    height: 25px;
+    background: #d2d0d0;
+}
+
+.main_menu__item.highlighted a {
+    color: #fa7a00;
+}
+
+/** BreadCrumbs **/
+.breadcrumb ul {
+    margin-top: 0;
+    padding-top: 16px;
+}
+
+.breadcrumb li {
+    font-size: 12px;
+    padding: 0 12px;
+    text-decoration: underline;
+    position: relative;
+}
+
+.breadcrumb li:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    background: url("../img/next.svg");
+}
+
+/** Main **/
+.form_section {
+    padding: 30px 0;
+}
+
+/** login Form **/
+#login_form .form_item {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.form_left, .form_right {
+    width: 30%;
+}
+
+.form_left {
+    margin-right: 10%;
+}
+
+#login_form .form_item input {
+    border: none;
+    padding: 10px;
+    flex: auto;
+    margin-top: 5px;
+}
+
+#login_form .form_item select {
+    border: none;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.form_item.row {
+    flex-direction: row;
+}
+
+.depot_favori {
+    flex-direction: row;
+}
+
+.depot_favori select {
+    flex: auto;
+}
+
+.depot_favori a {
+    text-align: right;
+    width: 100%;
+}
+
+/** Devenir Client **/
+.devenir_client {
+    padding: 20px;
+}
+
+.devenir_client_content {
+    justify-content: center;
+}
+
+.demande_carte {
+    padding: 0 40px;
+}
+

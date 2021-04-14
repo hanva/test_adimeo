@@ -1,151 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>Test d'intégration</title>
-  <meta charset="UTF-8">
+    <title>Test d'intégration</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
 
 <header>
-	<div class="wrapper wrapper-pre-header">
-		<div class="pre-header">
-			<div class="left">
-				Réservé exclusivement aux professionnels du bâtiment
-			</div>
-			<div class="right">
-				<nav id="pre-header-argu">
-					<ul>
-						<li class="commande"><a href="#">Commandé avant 12H, livré avant 16H !</a></li>
-						<li class="retrait"><a href="#">Retrait en dépôt</a></li>
-						<li class="paiement"><a href="#">Paiement sécurisé</a></li>
-						<li class="langue">
-							<span>Langue</span>
-							<ul>
-								<li class="selected"><a href="#">Français</a></li>
-								<li><a href="#">Anglais</a></li>
-								<li><a href="#">Espagnol</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<div class="wrapper wrapper-header">
-		<div class="header">
-			<div class="logo"><img src="logo.png" alt="Logo Plateforme du bâtiment" /></div>
-			<div class="recherche">
-				<form method="get">
-					<div class="form-item">
-						<select name="metier">
-							<option value="">Par métier</option>
-							<option value="1">Maçon</option>
-							<option value="2">Plombier</option>
-							<option value="3">Peintre</option>
-							<option value="4">Chauffagiste</option>
-						</select>
-					</div>
-					<div class="form-item">
-						<input type="text" name="mots_cles" placeholder="Rechercher un produit, une marque..." />
-					</div>
-					<div class="form-item">
-						<input type="submit" name="submit" value="Rechercher" />
-					</div>
-				</form>
-			</div>
-			<nav class="menu-utilisateur">
-				<ul>
-					<li class="depot"><div class="label"><a href="#">Mon dépôt</a></div><div class="lien"><a href="#">Se connecter</a></div></li>
-					<li class="compte"><div class="label"><a href="#">Mon compte</a></div><div class="lien"><a href="#">Se connecter</a></div></li>
-					<li class="panier"><div class="label"><a href="#">Mon panier</a></div></li>
-				</ul>
-			</nav>
-		</div>
-		<nav class="main-menu">
-			<ul>
-				<li><a href="#">Maçon plaquiste</a></li>
-				<li><a href="#">Menuisier serrurier</a></li>
-				<li><a href="#">Peintre</a></li>
-				<li><a href="#">Carreleur</a></li>
-				<li><a href="#">Plombier</a></li>
-				<li><a href="#">Electricien</a></li>
-				<li><a href="#">Outillage protection</a></li>
-				<li class="highlighted"><a href="#">100% pro</a></li>
-				<li class="highlighted"><a href="#">100% service</a></li>
-				<li class="highlighted"><a href="#">100% solution</a></li>
-			</ul>
-		</nav>
-	</div>
+    <div class="bg_secondary">
+        <div class="wrapper pre_header d_flex j_between align_center">
+            <div class="left font_bold text_uppercase">
+                Réservé exclusivement <br>aux professionnels du bâtiment
+            </div>
+            <div class="right">
+                <nav id="pre_header_argu">
+                    <ul class="d_flex font_bold">
+                        <li class="pre_header_argu--item commande">
+                            <img class="v_middle" width="20" alt="shipped" src="assets/img/header/shipped.svg">
+                            <a class="c_secondary--dark" href="#">Commandé avant 12H, livré avant 16H !</a>
+                        </li>
+                        <li class="pre_header_argu--item retrait">
+                            <img class="v_middle" width="20" alt="depot" src="assets/img/header/paquet.svg">
+                            <a class="c_secondary--dark" href="#">Retrait en dépôt</a>
+                        </li>
+                        <li class="pre_header_argu--item paiement">
+                            <img class="v_middle" width="20" alt="cadenas" src="assets/img/header/cadenas.svg">
+                            <a class="c_secondary--dark" href="#">Paiement sécurisé</a>
+                        </li>
+                        <li class="pre_header_argu--item langue">
+                            <span>Langue</span>
+                            <ul class="hidden">
+                                <li class="selected"><a href="#">Français</a></li>
+                                <li><a href="#">Anglais</a></li>
+                                <li><a href="#">Espagnol</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper wrapper_header">
+        <div class="header d_flex j_between align_center f_wrap">
+            <div class="logo"><img src="./assets/img/logo.png" alt="Logo Plateforme du bâtiment"/></div>
+            <div class="recherche">
+                <form method="get" class="d_flex">
+                    <div class="form_item">
+                        <select name="metier">
+                            <option value="">Par métier</option>
+                            <option value="1">Maçon</option>
+                            <option value="2">Plombier</option>
+                            <option value="3">Peintre</option>
+                            <option value="4">Chauffagiste</option>
+                        </select>
+                    </div>
+                    <div class="form_item f_auto">
+                        <input type="text" name="mots_cles" placeholder="Rechercher un produit, une marque..."/>
+                    </div>
+                    <div class="form_item form_item-loupe bg_primary">
+                        <label for="submit">
+                            <img width="16" src="assets/img/header/loupe.svg" alt="loupe">
+                        </label>
+                        <input hidden type="submit" id="submit" name="submit" value="Rechercher"/>
+                    </div>
+                </form>
+            </div>
+            <nav class="menu_utilisateur f_auto">
+                <ul class="d_flex j_around font_bold text_center">
+                    <li class="depot">
+                        <img width="35" src="assets/img/header/map.svg">
+                        <div class="label"><a class="font_extra_bold text_uppercase" href="#">Mon dépôt</a></div>
+                        <div class="lien"><a class="c_primary" href="#">Se connecter</a></div>
+                    </li>
+                    <li class="compte">
+                        <img width="35" src="assets/img/header/worker.svg">
+                        <div class="label"><a class="font_extra_bold text_uppercase" href="#">Mon compte</a></div>
+                        <div class="lien"><a class="c_primary" href="#">Se connecter</a></div>
+                    </li>
+                    <li class="panier">
+                        <img width="35" src="assets/img/header/shopping-cart.svg">
+                        <div class="label"><a class="font_extra_bold text_uppercase" href="#">Mon panier</a></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="main_menu">
+            <ul class="d_flex font_bold">
+                <li class="main_menu__item"><a href="#">Maçon plaquiste</a></li>
+                <li class="main_menu__item"><a href="#">Menuisier serrurier</a></li>
+                <li class="main_menu__item"><a href="#">Peintre</a></li>
+                <li class="main_menu__item"><a href="#">Carreleur</a></li>
+                <li class="main_menu__item"><a href="#">Plombier</a></li>
+                <li class="main_menu__item"><a href="#">Electricien</a></li>
+                <li class="main_menu__item"><a href="#">Outillage protection</a></li>
+                <li class="main_menu__item highlighted"><a href="#">100% pro</a></li>
+                <li class="main_menu__item highlighted"><a href="#">100% service</a></li>
+                <li class="main_menu__item highlighted"><a href="#">100% solution</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<main>
-	<div class="wrapper main-wrapper">
-		<div id="main-container">
-			<nav class="breadcrumb">
-				<ul>
-					<li><a href="#">Accueil</a></li>
-					<li><a href="#">Métier</a></li>
-					<li><a href="#">Grande famille</a></li>
-					<li><a href="#">Famille</a></li>
-					<li><a href="#">Produit</a></li>
-				</ul>
-			</nav>
-			<h1>Première connexion</h1>
-			<h2>J'ai déjà ma carte</h2>
-			<form method="get">
-				<div class="form-item numero-carte">
-					<label for="numero-carte">Numéro de carte :</label>
-					<input type="text" id="numero-carte" name="numero_carte" />
-				</div>
-				<div class="form-item numero-portable">
-					<label for="numero-portable">N° de téléphone portable :</label>
-					<input type="text" id="numero-portable" name="numero_portable" />
-				</div>
-				<div class="form-item adresse-email">
-					<label for="adresse-email">Adresse email :</label>
-					<input type="text" id="adresse-email" name="adresse_email" />
-				</div>
-				<div class="form-item confimer-email">
-					<label for="confimer-email">Confirmer adresse email :</label>
-					<input type="text" id="confimer-email" name="confimer_email" />
-				</div>
-				<div class="form-item mot-de-passe">
-					<label for="mot-de-passe">Mot de passe :</label>
-					<input type="text" id="mot-de-passe" name="mot_de_passe" />
-				</div>
-				<div class="form-item confirmer-mot-de-passe">
-					<label for="confirmer-mot-de-passe">Confirmation :</label>
-					<input type="text" id="confirmer-mot-de-passe" name="confirmer_mot_de_passe" />
-				</div>
-				<div class="form-item depot-favori">
-					<label for="depot-favori">Dépôt favori :</label>
-					<select id="depot-favori" name="depot_favori">
-						<option value="">Choisir mon dépôt</option>
-						<option value="1">Aubervilliers</option>
-						<option value="2">Pantin</option>
-						<option value="3">Nanterre</option>
-						<option value="4">Paris 12</option>
-					</select>
-					<a href="#">Changer de dépôt</a>
-				</div>
-				<div class="form-item submit-form">
-					<a href="#">Carte perdue ?</a>
-					<input type="submit" value="Se connecter" />
-				</div>
-			</form>
-			<div class="devenir-client">
-				<h2>Devenir client</h2>
-				<div class="demande-carte">
-					<h3>Je demande <em>ma carte</em> 100% pro</h3>
-					<p>
-						L'accès à nos points de vente est exclusivement réservé aux professionnels du bâtiment.
-					</p>
-				</div>
-				<div class="right">
-					<a href="#">Demander sa carte</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<main class="bg_secondary">
+    <div class="wrapper main_wrapper">
+        <div id="main_container">
+            <nav class="breadcrumb">
+                <ul class="d_flex">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Métier</a></li>
+                    <li><a href="#">Grande famille</a></li>
+                    <li><a href="#">Famille</a></li>
+                    <li><a href="#">Produit</a></li>
+                </ul>
+            </nav>
+            <section class="form_section">
+                <h1 class="font_light text_uppercase text_center">Première connexion</h1>
+                <h2 class="font_bold text_center text_uppercase">J'ai déjà ma carte</h2>
+                <form id="login_form" class="form d_flex j_center" method="get">
+                    <div class="form_left">
+                        <div class="form_item numero_carte">
+                            <label class="font_bold" for="numero_carte">Numéro de carte *</label>
+                            <input type="text" id="numero_carte" placeholder="Numéro a 13 chiffres"
+                                   name="numero_carte"/>
+                        </div>
+                        <div class="form_item numero_portable">
+                            <label class="font_bold" for="numero_portable">N° de téléphone portable *</label>
+                            <input type="text" id="numero_portable" name="numero_portable"/>
+                        </div>
+                        <div class="form_item adresse_email">
+                            <label class="font_bold" for="adresse_email">Adresse email *</label>
+                            <input type="text" id="adresse_email" name="adresse_email"/>
+                        </div>
+                        <div class="form_item confimer_email">
+                            <label class="font_bold" for="confimer_email">Confirmer adresse email *</label>
+                            <input type="text" id="confimer_email" name="confimer_email"/>
+                        </div>
+                    </div>
+                    <div class="form_right">
+                        <div class="form_item mot_de_passe">
+                            <label class="font_bold" for="mot_de_passe">Mot de passe *</label>
+                            <input type="text" id="mot_de_passe" name="mot_de_passe"/>
+                        </div>
+                        <div class="form_item confirmer_mot_de_passe">
+                            <label class="font_bold" for="confirmer_mot_de_passe">Confirmation *</label>
+                            <input type="text" id="confirmer_mot_de_passe" name="confirmer_mot_de_passe"/>
+                        </div>
+                        <div class="form_item depot_favori f_wrap row">
+                            <label class="font_bold" for="depot_favori">Dépôt favori *</label>
+                            <select id="depot_favori" name="depot_favori">
+                                <option value="">Choisir mon dépôt</option>
+                                <option value="1">Aubervilliers</option>
+                                <option value="2">Pantin</option>
+                                <option value="3">Nanterre</option>
+                                <option value="4">Paris 12</option>
+                            </select>
+                            <a href="#">Changer de dépôt</a>
+                        </div>
+                        <div class="form_item submit_form row">
+                            <a href="#">Carte perdue ?</a>
+                            <input type="submit" value="Se connecter"/>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="devenir_client bg_secondary--dark">
+                <h2 class="text_center">Devenir client</h2>
+                <div class="devenir_client_content d_flex align_center">
+                    <img src="assets/img/pro.png" alt="pro cb" width="80">
+                    <div class="demande_carte d_flex f_column">
+                        <h3>Je demande <span class="font_extra_bold text_underline text_uppercase">ma carte</span>
+                            100% pro</h3>
+                        <p>
+                            L'accès à nos points de vente est exclusivement<br> réservé aux professionnels du bâtiment.
+                        </p>
+                    </div>
+                    <a href="#">Demander sa carte</a>
+                </div>
+            </section>
+        </div>
+    </div>
 </main>
 
 </body>
