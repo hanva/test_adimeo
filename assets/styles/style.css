@@ -97,16 +97,6 @@ a {
 }
 
 /** General **/
-input, select::placeholder {
-    font-style: italic;
-    font-weight: bold;
-    color: #333333;
-}
-
-:placeholder-shown {
-    text-overflow: ellipsis;
-}
-
 .wrapper {
     max-width: 1250px;
     padding: 0 5%;
@@ -163,6 +153,20 @@ li {
     text-align: center;
 }
 
+input, select {
+    font-weight: bold;
+    color: #333333;
+}
+
+input::placeholder, select::placeholder {
+    font-style: italic;
+}
+
+:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
+
 /** Pre Header **/
 .pre_header .left img {
     margin-right: 10px;
@@ -172,14 +176,16 @@ li {
     margin: 0;
 }
 
-.pre_header_argu--item {
-    padding: 15px 0;
-    margin-left: 30px;
-}
-
 .pre_header_argu--image {
     margin-right: 15px;
     vertical-align: middle;
+}
+
+.pre_header_argu--item {
+    padding: 15px 0;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .pre_header_argu--item.langue {
@@ -189,8 +195,8 @@ li {
     position: relative;
 }
 
-.pre_header_argu--item.langue:hover .hidden {
-    display: block;
+.pre_header_argu--item.langue li {
+    padding: 10px;
 }
 
 .pre_header_argu--item.langue .hidden {
@@ -200,10 +206,9 @@ li {
     display: none;
 }
 
-.pre_header_argu--item.langue li {
-    padding: 10px;
+.pre_header_argu--item.langue:hover .hidden {
+    display: block;
 }
-
 
 /** Header **/
 .header {
@@ -245,6 +250,7 @@ header {
 
 .recherche input, .recherche select {
     padding: 15px;
+    margin-right: 20px;
     border: none;
 }
 
@@ -284,6 +290,7 @@ header {
 
 .main_menu__item.highlighted a {
     color: #fa7a00;
+    font-family: "Raleway ExtraBold", serif;
 }
 
 /** BreadCrumbs **/
@@ -356,25 +363,27 @@ header {
     overflow: hidden;
 }
 
-.depot_favori a {
-    margin-top: 10px;
-    text-align: right;
-    width: 100%;
-}
-
 .depot_favori:after {
     content: "";
     position: absolute;
+    bottom: 24px;
     right: 12px;
     width: 13px;
     height: 40px;
     background: no-repeat url("../img/arrows.jpg");
 }
 
+.depot_favori a {
+    margin-top: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+
 /** Devenir Client **/
 .devenir_client {
-    padding: 1px 0 20px;
-    margin-bottom: 20px;
+    padding: 1px 20px 40px;
+    margin-bottom: 40px;
 }
 
 .demande_carte {
@@ -397,6 +406,7 @@ header {
     border: 2px solid black;
     border-radius: 2px;
 }
+/** Header Mobile **/
 
 @media only screen and (max-width: 992px) {
     .pre_header {
@@ -404,7 +414,7 @@ header {
     }
 
     .recherche {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 
     .main_menu {
