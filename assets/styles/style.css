@@ -392,6 +392,7 @@ header {
 
 /** Buttons **/
 .button {
+    text-align: center;
     padding: 10px 40px;
     margin-left: 20px;
 }
@@ -406,6 +407,7 @@ header {
     border: 2px solid black;
     border-radius: 2px;
 }
+
 /** Header Mobile **/
 
 @media only screen and (max-width: 992px) {
