@@ -13,6 +13,8 @@ body, select, input, ul, li {
     margin: 0;
     padding: 0;
     font-family: "Raleway Regular", serif;
+    font-size: 14px;
+    color: #272727;
 }
 
 .font_light {
@@ -27,6 +29,14 @@ body, select, input, ul, li {
     font-family: "Raleway ExtraBold", serif;
 }
 
+.title_main {
+    font-size: 40px;
+}
+
+.title_secondary {
+    font-size: 32px;
+}
+
 .text_uppercase {
     text-transform: uppercase;
 }
@@ -35,10 +45,15 @@ body, select, input, ul, li {
     text-decoration: underline;
 }
 
+.text_small {
+    font-size: 12px;
+}
+
 /** Colors **/
 .c_primary {
     color: #fa7a00;
 }
+
 
 .bg_primary {
     background: #fa7a00;
@@ -64,14 +79,29 @@ body, select, input, ul, li {
     color: #333333;
 }
 
+.c_white {
+    color: white;
+}
+
+.c_grey {
+    color: #919191;
+}
+
 a {
     color: #333333;
+    text-decoration: unset;
 }
 
 /** General **/
+input, select::placeholder {
+    font-style: italic;
+    font-weight: bold;
+    color: #333333;
+}
+
 .wrapper {
     max-width: 1250px;
-    padding: 0 50px;
+    padding: 0 5%;
     margin: auto;
 }
 
@@ -120,11 +150,20 @@ li {
     margin-right: auto;
 }
 
+.my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .text_center {
     text-align: center;
 }
 
 /** Pre Header **/
+.pre_header .left img {
+    margin-right: 10px;
+}
+
 #pre_header_argu ul {
     margin: 0;
 }
@@ -138,6 +177,7 @@ li {
     background: #dbdbdb;
     padding: 15px;
     cursor: pointer;
+    position: relative;
 }
 
 .pre_header_argu--item.langue:hover .hidden {
@@ -146,6 +186,7 @@ li {
 
 .pre_header_argu--item.langue .hidden {
     position: absolute;
+    top: 50px;
     background: white;
     display: none;
 }
@@ -181,9 +222,29 @@ header {
     padding: 15px;
 }
 
+.recherche .form_item.search {
+    overflow: hidden;
+}
+
+.recherche .form_item.search input[name="mots_cles"] {
+    min-width: 100%;
+}
+
+.recherche .form_item.search input[name="mots_cles"]:focus {
+    outline: none;
+}
+
 .recherche input, .recherche select {
     padding: 15px;
     border: none;
+}
+
+.burger_container {
+    display: none;
+}
+
+.menu_utilisateur .arrow img {
+    margin-left: 5px;
 }
 
 /** Menu **/
@@ -198,6 +259,7 @@ header {
     padding: 0 20px;
     position: relative;
     height: 50px;
+    max-width: 90px;
     text-align: center;
 }
 
@@ -262,42 +324,140 @@ header {
     border: none;
     padding: 10px;
     flex: auto;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #login_form .form_item select {
     border: none;
     padding: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
-.form_item.row {
+#login_form .form_item.row {
     flex-direction: row;
+}
+
+#login_form .submit_form {
+    margin-top: auto;
 }
 
 .depot_favori {
     flex-direction: row;
-}
-
-.depot_favori select {
-    flex: auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .depot_favori a {
+    margin-top: 10px;
     text-align: right;
     width: 100%;
 }
 
-/** Devenir Client **/
-.devenir_client {
-    padding: 20px;
+.depot_favori:after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    width: 13px;
+    height: 40px;
+    background: no-repeat url("../img/arrows.jpg");
 }
 
-.devenir_client_content {
-    justify-content: center;
+/** Devenir Client **/
+.devenir_client {
+    padding: 1px 0 20px;
+    margin-bottom: 20px;
 }
 
 .demande_carte {
     padding: 0 40px;
 }
 
+/** Buttons **/
+.button {
+    padding: 10px 40px;
+    margin-left: 20px;
+}
+
+.submit_form_button {
+    font-style: unset;
+    max-width: 180px;
+    margin-left: auto;
+}
+
+.button_outline--black {
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+    .pre_header {
+        flex-direction: column;
+    }
+
+    .recherche {
+        margin: 10px 0;
+    }
+
+    .main_menu {
+        display: none;
+    }
+
+    .main_menu__item {
+        max-width: 25%;
+        width: 25%;
+        text-align: left;
+    }
+
+    .main_menu__item:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1px;
+        bottom: 12.5px;
+        height: 25px;
+        background: #d2d0d0;
+    }
+
+    .burger_container {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger_container {
+        margin-right: 10px;
+    }
+
+    .burger_input:checked ~ .main_menu {
+        display: block;
+    }
+
+    .form_left {
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pre_header .left img {
+        margin: 10px;
+    }
+
+    .text_center_mb {
+        text-align: center;
+    }
+
+    .f_column_mb {
+        flex-direction: column;
+    }
+
+    .form_left, .form_right {
+        width: 100%;
+    }
+
+    .recherche form {
+        margin: 0;
+    }
+
+    .demande_carte {
+        margin: 15px 0;
+    }
+}
