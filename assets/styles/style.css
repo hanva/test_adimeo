@@ -416,7 +416,7 @@ header {
     }
 
     .recherche {
-        margin: 15px 0;
+        margin: 25px 15px;
     }
 
     .main_menu {
@@ -447,6 +447,7 @@ header {
     }
 
     .burger_container {
+        padding-right: 20px;
         display: block;
         cursor: pointer;
         justify-self: flex-start;
@@ -485,9 +486,23 @@ header {
 
     .recherche form {
         margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .recherche form .select_container, .recherche form select {
+        width: 100%;
+    }
+
+    .recherche form input {
+        margin-right: 0;
     }
 
     .demande_carte {
+        text-align: center;
         margin: 20px 0;
+    }
+
+    .devenir_client .button {
+        margin-left: 0;
     }
 }
