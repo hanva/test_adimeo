@@ -37,6 +37,10 @@ body, select, input, ul, li {
     font-size: 32px;
 }
 
+.title_thirdary {
+    font-size: 22px;
+}
+
 .text_uppercase {
     text-transform: uppercase;
 }
@@ -99,6 +103,10 @@ input, select::placeholder {
     color: #333333;
 }
 
+:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
 .wrapper {
     max-width: 1250px;
     padding: 0 5%;
@@ -131,10 +139,6 @@ input, select::placeholder {
 
 .j_center {
     justify-content: center;
-}
-
-.v_middle {
-    vertical-align: middle;
 }
 
 .align_center {
@@ -171,6 +175,11 @@ li {
 .pre_header_argu--item {
     padding: 15px 0;
     margin-left: 30px;
+}
+
+.pre_header_argu--image {
+    margin-right: 15px;
+    vertical-align: middle;
 }
 
 .pre_header_argu--item.langue {
@@ -227,7 +236,7 @@ header {
 }
 
 .recherche .form_item.search input[name="mots_cles"] {
-    min-width: 100%;
+    min-width: calc(100% - 30px);
 }
 
 .recherche .form_item.search input[name="mots_cles"]:focus {
@@ -399,7 +408,14 @@ header {
     }
 
     .main_menu {
-        display: none;
+        position: fixed;
+        padding: 20px;
+        height: 100vh;
+        top: 0%;
+        left: -100%;
+        background: white;
+        transition: 1s;
+        z-index: 2;
     }
 
     .main_menu__item {
@@ -421,24 +437,26 @@ header {
     .burger_container {
         display: block;
         cursor: pointer;
+        justify-self: flex-start;
     }
 
-    .burger_container {
-        margin-right: 10px;
+    .burger_container, .logo {
+        margin-right: auto;
+        text-align: right;
     }
 
     .burger_input:checked ~ .main_menu {
-        display: block;
-    }
-
-    .form_left {
-
+        left: 0;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .pre_header .left img {
         margin: 10px;
+    }
+
+    .pre_header_argu--item {
+        margin: 0;
     }
 
     .text_center_mb {
@@ -458,6 +476,6 @@ header {
     }
 
     .demande_carte {
-        margin: 15px 0;
+        margin: 20px 0;
     }
 }
